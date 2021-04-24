@@ -2,10 +2,10 @@ import multer from "multer";
 import path from "path";
 import crypto from "crypto";
 
-const tmpFolder = path.resolve(__dirname,'..','..','temp');
+const tmpFolder = path.resolve(__dirname, '..', '..', 'temp');
 
 export default {
-   directory: path.resolve(__dirname,'..','..','temp'),
+   directory: tmpFolder,
 
    storage: multer.diskStorage({
       destination: tmpFolder,

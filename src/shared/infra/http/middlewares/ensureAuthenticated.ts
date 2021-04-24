@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import { verify } from "jsonwebtoken";
-import auth from "../../config/auth";
-import appError from '../errors/AppError';
+import auth from "@config/auth";
+import appError from '@shared/errors/AppError';
 
 /* Uma interface para o retorno da função verify que pode ser um objeto
 ou uma string, nesse caso podemos forçar o retono no formato */
