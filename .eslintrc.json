@@ -1,61 +1,73 @@
 {
    "env": {
-       "es2021": true
+      "es2021": true
    },
    "extends": [
-       "plugin:react/recommended",
-       "airbnb",
-       "plugin:@typescript-eslint/recommended",
-       "plugin:prettier/recommended"
+      "plugin:react/recommended",
+      "airbnb",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:prettier/recommended"
    ],
-     "globals": {
-       "__DEV__": "readonly"
+   "globals": {
+      "__DEV__": "readonly"
    },
    "parser": "@typescript-eslint/parser",
    "parserOptions": {
-       "ecmaFeatures": {
-           "jsx": true
-       },
-       "ecmaVersion": 12,
-       "sourceType": "module"
+      "ecmaFeatures": {
+         "jsx": true
+      },
+      "ecmaVersion": 12,
+      "sourceType": "module"
    },
    "plugins": [
-       "react",
-       "react-hooks",
-       "@typescript-eslint",
-       "prettier"
+      "react",
+      "react-hooks",
+      "@typescript-eslint",
+      "prettier"
    ],
    "rules": {
       "react-hooks/rules-of-hooks": "error",
-      "class-methods-use-this":"off",
+      "class-methods-use-this": "off",
       "react-hooks/exhaustive-deps": "warn",
       "@typescript-eslint/camelcase": "off",
       "react/react-in-jsx-scope": "off",
       "prettier/prettier": "error",
       "react/jsx-filename-extension": [
-        1,
-        {
-          "extensions": [
-            ".tsx"
-          ]
-        }
+         1,
+         {
+            "extensions": [
+               ".tsx"
+            ]
+         }
+      ],
+      "@typescript-eslint/naming-convention": [
+         "error",
+         {
+            "selector": "interface",
+            "prefix": [
+               "I"
+            ],
+            "format": [
+               "PascalCase"
+            ]
+         }
       ],
       "import/extensions": [
-        "error",
-        "ignorePackages",
-        {
-          "ts": "never",
-          "tsx": "never"
-        }
+         "error",
+         "ignorePackages",
+         {
+            "ts": "never",
+            "tsx": "never"
+         }
       ],
       "no-use-before-define": "off",
       "@typescript-eslint/no-use-before-define": [
-        "error"
+         "error"
       ]
    },
    "settings": {
-     "import/resolver": {
-       "typescript": {}
-     }
+      "import/resolver": {
+         "typescript": {}
+      }
    }
 }
